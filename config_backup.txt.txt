@@ -1,2 +1,4 @@
 // TEMP LOGGING ENDPOINT
-// URL: https://pastebin.com/XXXXXX
+
+// URL: https://pantip.com/topic/43994272
+// User: SonofBorr
