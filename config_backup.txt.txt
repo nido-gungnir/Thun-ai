@@ -1,0 +1,2 @@
+// TEMP LOGGING ENDPOINT
+// URL: https://pastebin.com/XXXXXX

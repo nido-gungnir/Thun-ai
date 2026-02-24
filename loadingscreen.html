@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#54cf17",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#162111",
+                        "content-light": "#162111",
+                        "content-dark": "#f6f8f6",
+                        "subtle-light": "#6b7280",
+                        "subtle-dark": "#9ca3af",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-content-light dark:text-content-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div>
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark">
+<button class="text-content-light dark:text-content-dark">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center">Input Management Hub</h1>
+<div class="w-8"></div> 
+</header>
+<main class="p-4 space-y-6">
+<div class="text-left">
+<h2 class="text-2xl font-bold">இன்றைய பரிந்துரைகள்</h2>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">
+                        உங்கள் [45] நாட்கள் ஆன [Cotton] பயிருக்கு, செப்டம்பர் 28, 2025 ஞாயிற்றுக்கிழமைக்கான பரிந்துரைகள்:
+                    </p>
+</div>
+<div class="bg-white dark:bg-background-dark/50 rounded-xl shadow-sm overflow-hidden">
+<div class="p-4">
+<h3 class="text-lg font-bold">Water Management</h3>
+</div>
+<div class="p-4 bg-primary/10 dark:bg-primary/20 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-5xl text-primary">cloud</span>
+<p class="mt-2 text-lg font-bold text-content-light dark:text-content-dark">இன்று பாசனம் தேவையில்லை</p>
+<p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">வானிலை முன்னறிவிப்பின்படி, இன்று போதுமான மழை பெய்யும்.</p>
+</div>
+<div class="p-4">
+<button class="w-full flex items-center justify-center rounded-lg h-11 px-4 bg-primary text-white text-sm font-medium">
+                            வாராந்திர அறிக்கை
+                        </button>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark/50 rounded-xl shadow-sm overflow-hidden">
+<div class="p-4">
+<h3 class="text-lg font-bold">Fertilizer Management</h3>
+</div>
+<div class="p-4 bg-primary/10 dark:bg-primary/20 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-5xl text-primary">shopping_bag</span>
+<p class="mt-2 text-lg font-bold text-content-light dark:text-content-dark">இன்று உரமிடவும்</p>
+<p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">பயிர் வளர்ச்சி நிலை மற்றும் மண் பரிசோதனை அடிப்படையில் உரம் தேவைப்படுகிறது.</p>
+</div>
+<div class="p-4">
+<button class="w-full flex items-center justify-center rounded-lg h-11 px-4 bg-primary text-white text-sm font-medium">
+                            முழு உர அட்டவணை
+                        </button>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800">
+<nav class="flex justify-around px-4 pb-3 pt-2">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-xs font-medium">My Reports</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">mic</span>
+<span class="text-xs font-medium">Voice</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-xs font-medium">Market</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+<div class="h-5 bg-background-light dark:bg-background-dark"></div>
+</footer>
+</div>
+
+</body></html>
