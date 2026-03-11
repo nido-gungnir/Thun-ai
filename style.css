@@ -1,0 +1,122 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #2C5F2D; /* Deep Green */
+    --secondary-color: #97BC62; /* Light Green */
+    --accent-color: #FFC947; /* Bright Yellow/Orange */
+    --text-color: #333;
+    --bg-color: #F4F6F6;
+    --white-color: #fff;
+    --font-family: 'Poppins', sans-serif;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-family); color: var(--text-color); background-color: var(--bg-color); line-height: 1.6; }
+#app-container { display: flex; flex-direction: column; min-height: 100vh; }
+main { flex-grow: 1; padding-top: 100px; padding-bottom: 40px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section-title { font-size: 2.2rem; color: var(--primary-color); text-align: center; margin-bottom: 40px; }
+.card { background: var(--white-color); border-radius: 12px; padding: 25px; box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); }
+.cta-button { background-color: var(--accent-color); color: var(--text-color); padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: background-color 0.3s, transform 0.3s; display: inline-block; }
+.cta-button:hover { background-color: #ffb700; transform: translateY(-3px); }
+
+/* --- Navigation Bar --- */
+.navbar { background-color: var(--white-color); box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+.nav-logo { color: var(--primary-color); font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+.nav-menu { display: flex; list-style: none; }
+.nav-item { margin-left: 30px; }
+.nav-link { text-decoration: none; color: var(--text-color); font-weight: 600; transition: color 0.3s; padding-bottom: 5px; border-bottom: 2px solid transparent; }
+.nav-link:hover, .nav-link.active { color: var(--primary-color); border-bottom-color: var(--primary-color); }
+.hamburger { display: none; cursor: pointer; }
+.bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--primary-color); transition: all 0.3s ease-in-out; }
+
+/* --- Home Page --- */
+.dashboard-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+.welcome-card h2 { margin-bottom: 10px; }
+.welcome-card span { color: var(--secondary-color); font-weight: 700; }
+.quick-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
+.action-btn { background: var(--bg-color); border-radius: 8px; padding: 20px; text-align: center; text-decoration: none; color: var(--text-color); font-weight: 600; transition: background 0.3s; }
+.action-btn:hover { background: var(--secondary-color); color: var(--white-color); }
+.action-btn .icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+.weather-day { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
+
+/* --- Crop Doctor Page --- */
+.upload-section { text-align: center; }
+.upload-area { border: 2px dashed #ccc; border-radius: 10px; padding: 40px; margin: 20px 0; cursor: pointer; }
+.upload-area:hover { border-color: var(--primary-color); }
+#diagnosis-result { margin-top: 30px; text-align: left; }
+.result-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: center; }
+.result-grid img { width: 100%; border-radius: 8px; }
+.solution-tabs { margin-top: 15px; }
+.solution-tabs button { padding: 10px 15px; border: none; background: #eee; cursor: pointer; }
+.solution-tabs button.active { background: var(--secondary-color); color: white; }
+.solution-content { margin-top: 10px; }
+
+/* --- NEW: Crop Doctor Image Preview --- */
+#image-preview-container {
+    margin-top: 20px;
+    text-align: center;
+}
+#image-preview-container img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
+    border: 2px solid #eee;
+}
+#image-preview-container p {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* --- NEW: Crop Planner Page --- */
+.planner-form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: flex-end; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { margin-bottom: 5px; font-weight: 600; }
+.form-group input, .form-group select { padding: 12px; font-size: 1rem; border-radius: 8px; border: 1px solid #ccc; }
+#planner-results { margin-top: 40px; }
+.recommendation-card { margin-bottom: 20px; border-left: 5px solid var(--primary-color); }
+.recommendation-card.top-pick { border-left-color: var(--accent-color); }
+.rec-header { display: flex; justify-content: space-between; align-items: center; }
+.rec-header h3 { font-size: 1.5rem; }
+.rec-tag { background: var(--accent-color); color: var(--text-color); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+.rec-details { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 15px; text-align: center; }
+.rec-details div p { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
+
+/* --- Chatbot Styles --- */
+.chat-open-btn { position: fixed; bottom: 30px; right: 30px; background-color: var(--primary-color); color: white; border: none; border-radius: 50%; width: 60px; height: 60px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; z-index: 1000; transition: transform 0.3s; }
+.chat-open-btn:hover { transform: scale(1.1); }
+.chat-open-btn img { width: 35px; height: 35px; }
+.chat-widget { position: fixed; bottom: 100px; right: 30px; width: 350px; max-width: 90%; background-color: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); display: flex; flex-direction: column; overflow: hidden; z-index: 1001; transform: scale(0); transform-origin: bottom right; transition: transform 0.3s ease-in-out; }
+.chat-widget.active { transform: scale(1); }
+.chat-header { background-color: var(--primary-color); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+.chat-header h4 { margin: 0; font-size: 1rem; }
+.close-chat { background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+.chat-body { flex-grow: 1; padding: 15px; overflow-y: auto; height: 400px; }
+.chat-log .message { margin-bottom: 15px; display: flex; flex-direction: column; }
+.chat-log .message.user { align-items: flex-end; }
+.chat-log .message.bot { align-items: flex-start; }
+.chat-log .message-text { padding: 10px 15px; border-radius: 18px; max-width: 80%; }
+.chat-log .message.user .message-text { background-color: var(--secondary-color); color: white; border-bottom-right-radius: 3px; }
+.chat-log .message.bot .message-text { background-color: #f1f0f0; color: var(--text-color); border-bottom-left-radius: 3px; }
+.chat-input-area { display: flex; padding: 10px; border-top: 1px solid #eee; }
+#chat-input { flex-grow: 1; border: 1px solid #ddd; border-radius: 20px; padding: 10px 15px; font-family: var(--font-family); }
+#send-btn { background-color: var(--primary-color); color: white; border: none; border-radius: 20px; padding: 10px 20px; margin-left: 10px; cursor: pointer; font-weight: 600; }
+
+/* --- Responsive Design --- */
+@media(max-width: 768px) {
+    .hamburger { display: block; }
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .nav-menu { position: fixed; left: -100%; top: 70px; flex-direction: column; background-color: var(--white-color); width: 100%; text-align: center; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    .nav-menu.active { left: 0; }
+    .nav-item { margin: 20px 0; }
+    .dashboard-grid, .result-grid { grid-template-columns: 1fr; }
+}
+
+footer { background-color: var(--text-color); color: var(--white-color); text-align: center; padding: 20px 0; }
+
+
